@@ -25,6 +25,9 @@ var ManageAuthorPage = React.createClass({
       dirty: false
     };
   },
+  // componentWillMount: function () {
+  //
+  // },
   setAuthorState: function (event) {
     this.setState({ dirty: true });
     var field = event.target.name;
