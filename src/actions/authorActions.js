@@ -1,4 +1,4 @@
-"use Strict";
+"use strict";
 
 var Dispatcher = require('../dispatcher/appDispatcher');
 var AuthorApi = require('../api/authorApi');
