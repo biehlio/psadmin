@@ -24,15 +24,17 @@ var AuthorStore = assign({}, EventEmitter.prototype, {
     return _authors;
   },
   getAuthorById: function(id) {
-    return _.find(_authors, {id: id});
+    return _.find(_authors, {
+      id: id
+    });
   }
 });
 
 Dispatcher.register(function(action) {
   switch (action.actionType) {
-    case ActionTypes.CREATE_AUTHOR:
-      _authors.push(action.author);
-      AuthorStore.emitChange();
+  case ActionTypes.CREATE_AUTHOR:
+    _authors.push(action.author);
+    AuthorStore.emitChange();
   }
 });
 

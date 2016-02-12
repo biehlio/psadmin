@@ -1,10 +1,9 @@
-/*eslint-disable strict*/
+/* eslint-disable strict */
 
 var React = require('react');
 var Header = require('./common/header.jsx');
 var RouteHandler = require('react-router').RouteHandler;
 $ = jQuery = require('jquery');
-var PropTypes = React.PropTypes;
 
 var App = React.createClass({
   render: function() {
