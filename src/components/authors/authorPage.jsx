@@ -1,9 +1,7 @@
 'use strict';
 var React = require('react');
-var Router = require('react-router');
 var Link = require('react-router').Link;
 var AuthorStore = require('../../stores/authorStore');
-var AuthorActions = require('../../actions/authorActions');
 var AuthorList = require('./authorList.jsx');
 
 var AuthorPage = React.createClass({
@@ -13,6 +11,20 @@ var AuthorPage = React.createClass({
     };
   },
 
+  componentWillMount: function() {
+    AuthorStore.addChangeListener(this._onChange);
+  },
+
+  // Clean up when this componet is unmounted
+  componentWillUnmount: function() {
+    AuthorStore.removeChangeListener(this._onChange);
+  },
+
+  _onChange: function() {
+    this.setState({
+      authors: AuthorStore.getAllAuthors()
+    });
+  },
   render: function() {
     return (
       <div>
