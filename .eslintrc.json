@@ -1,0 +1,29 @@
+{
+    "rules": {
+        "indent": [2, 2],
+        "quotes": [
+            2,
+            "single"
+        ],
+        "linebreak-style": [
+            2,
+            "windows"
+        ],
+        "semi": [
+            2,
+            "always"
+        ],
+        "no-undef": [2]
+    },
+    "env": {
+        "browser": true
+    },
+    "extends": "google",
+    "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+    },
+    "plugins": [
+        "react"
+    ]
+}
